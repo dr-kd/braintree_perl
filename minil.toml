@@ -1,0 +1,4 @@
+author = "Kieren Diment <zarquon@cpan.org>"
+license = "Perl_5"
+name = "WebService-Braintree"
+version = "1.7"
