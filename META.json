@@ -1,0 +1,125 @@
+{
+   "abstract" : "A Client Library for wrapping the Braintree Payment Services Gateway API",
+   "author" : [
+      "Kieren Diment <zarquon@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v3.1.21, CPAN::Meta::Converter version 2.150010",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "WebService-Braintree",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.035"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.07",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Class::Load::XS" : "0",
+            "DDP" : "0",
+            "Data::GUID" : "0",
+            "DateTime" : "0",
+            "DateTime::Format::Atom" : "0",
+            "DateTime::Format::RFC3339" : "0",
+            "DateTime::Format::Strptime" : "0",
+            "Digest" : "0",
+            "Digest::HMAC_SHA1" : "0",
+            "Digest::SHA" : "0",
+            "Digest::SHA1" : "0",
+            "Digest::SHA256" : "0",
+            "HTTP::Request" : "0",
+            "Hash::Inflator" : "0",
+            "JSON" : "0",
+            "LWP" : "6.02",
+            "LWP::Protocol::https" : "0",
+            "MIME::Base64" : "0",
+            "Module::Install::TestTarget" : "0",
+            "Moo" : "0",
+            "MooX::Aliases" : "0",
+            "Mozilla::CA" : "0",
+            "Scalar::Util" : "0",
+            "Try::Tiny" : "0",
+            "Type::Tiny" : "0",
+            "URI" : "0",
+            "URI::Query" : "0",
+            "XML::LibXML" : "0",
+            "XML::Simple" : "0",
+            "local::lib" : "0",
+            "perl" : "5.010001",
+            "strictures" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Data::Printer" : "0",
+            "String::CamelCase" : "0",
+            "Test::Deep" : "0",
+            "Test::More" : "0.98",
+            "Test::Pod" : "0",
+            "Test::Warn" : "0"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Peatix/braintree_perl/issues"
+      },
+      "homepage" : "https://github.com/Peatix/braintree_perl",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/Peatix/braintree_perl.git",
+         "web" : "https://github.com/Peatix/braintree_perl"
+      }
+   },
+   "version" : "1.7",
+   "x_contributors" : [
+      "Akira Sawada <aklaswad@gmail.com>",
+      "Ayaka Nonaka <ayanonagon@gmail.com>",
+      "Braintree <code@braintreepayments.com>",
+      "Braintree <code@getbraintree.com>",
+      "Braintree <jacob.sandlund@getbraintree.com>",
+      "Carl Saturnino <carl@peatix.com>",
+      "John Downey <john@jtdowney.com>",
+      "Kieren Diment <diment@gmail.com>",
+      "Mohammad S Anwar <Mohammad.Anwar@yahoo.com>",
+      "Mohammad S Anwar <mohammad.anwar@yahoo.com>",
+      "Rob Kinyon <rob.kinyon@gmail.com>",
+      "Tom Heady <theady@ziprecruiter.com>",
+      "tonyo <tony.odell@live.com>"
+   ],
+   "x_serialization_backend" : "JSON::PP version 4.07",
+   "x_static_install" : 1
+}

@@ -22,3 +22,11 @@ sandbox_config.json
 test_diffs
 build_log
 Dockerfile.5*
+/WebService-Braintree-*
+/.build
+/_build_params
+/Build
+/Build.bat
+!Build/
+!META.json
+!LICENSE
