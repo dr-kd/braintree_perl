@@ -104,7 +104,7 @@
          "web" : "https://github.com/Peatix/braintree_perl"
       }
    },
-   "version" : "1.7",
+   "version" : "1.721",
    "x_contributors" : [
       "Akira Sawada <aklaswad@gmail.com>",
       "Ayaka Nonaka <ayanonagon@gmail.com>",
