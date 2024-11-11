@@ -87,8 +87,11 @@ sub make_request {
     warn Dumper $response->content if $ENV{WEBSERVICE_BRAINTREE_DEBUG};
 
     $self->check_response_code($response->code);
+	if (! $response->header('Content-Length') ) {
+		$response->header( 'Content-Length', length( $response->content ) );
+	}
 
-    if ($response->header('Content-Length') > 1) {
+    if (length($response->content) > 1 || $response->header('Content-Length') > 1) {
         return xml_to_hash($response->content);
     } else {
         return {http_status => $response->code};
