@@ -59,6 +59,22 @@ This is your private_key.
 
 has private_key => (is => 'rw');
 
+=head2 access_token(?$value)
+
+This is your access_token.
+
+=cut
+
+has access_token => (
+    is => 'rw',
+    trigger => sub {
+        my ($self, $new_value, $old_value) = @_;
+
+        my @params = split( /\$/, $new_value );
+        $self->merchant_id( $params[2] );
+    }
+);
+
 =head2 environment(?$value)
 
 This is your environment. The environment can be:

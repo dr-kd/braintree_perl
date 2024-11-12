@@ -44,7 +44,14 @@ sub delete {
 sub make_request {
     my ($self, $verb, $path, $params, $file) = @_;
     my $request = HTTP::Request->new($verb => $self->config->base_merchant_url . $path);
-    $request->headers->authorization_basic($self->config->public_key, $self->config->private_key);
+
+    if ( $self->config->public_key && $self->config->private_key ) {
+        $request->headers->authorization_basic($self->config->public_key, $self->config->private_key);
+    }
+
+    if ( $self->config->access_token ) {
+        $request->header( 'Authorization' => 'Bearer ' . $self->config->access_token );
+    }
 
     if ($file) {
         my $boundary = DateTime->now->strftime('%Q');
@@ -88,7 +95,7 @@ sub make_request {
 
     $self->check_response_code($response->code);
 
-    if ($response->header('Content-Length') > 1) {
+    if ( $response->content || ( $response->header('Content-Length') && $response->header('Content-Length') > 1 ) ) {
         return xml_to_hash($response->content);
     } else {
         return {http_status => $response->code};
